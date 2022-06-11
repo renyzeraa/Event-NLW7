@@ -11,9 +11,23 @@ function changeSocialLinks() {
     const social = li.getAttribute('class')
 
     li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-    alert(li.children[0].href)
   }
 }
 
 changeSocialLinks()
+
+function getProfileGithub() {
+  const url = `https://api.github.com/users/${LinksSocialMedia.github}`
+
+  fetch(url)
+    .then(reponse => reponse.json())
+    .then(data => {
+      userName.textContent = data.name
+      userLogin.textContent = data.login
+      userBio.textContent = data.bio
+      userLink.href = data.url
+      userImage.src = data.avatar_url
+    })
+}
+
+getProfileGithub()
