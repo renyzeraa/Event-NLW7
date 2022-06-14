@@ -1,6 +1,6 @@
 const LinksSocialMedia = {
   github: 'renyzeraa',
-  youtube: 'renans98',
+  youtube: 'renansilva',
   instagram: 'renyzeraa',
   facebook: 'renans98',
   twitter: 'renyzeraa'
